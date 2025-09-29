@@ -25,7 +25,7 @@
         }
         elseif ($a == 0)
         {
-            
+           echo "a no existe por lo cual no es una equacion de 2º grado"; 
         }
         else
         {
