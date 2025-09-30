@@ -13,8 +13,8 @@
     Hay q considerar q todos en algun punto sea 0
     */
         $a = 3;
-        $b = -5;
-        $c = 2;
+        $b = 0;
+        $c = -2;
         
         if ($a == 0)
         {
@@ -29,7 +29,15 @@
         }
         elseif ($b == 0)
         {
-            printf("El resultado de x es: %.02f y %.02f",sqrt((-$c)/$a),-(sqrt((-$c)/$a)));
+            if (($c < 0 &&  $a < 0) || ($a > 0 && $c > 0))
+            {
+                printf("El a y el c tienen signos contrarios");
+            }
+            else
+            {
+                printf("El resultado de x es: %.02f y %.02f",sqrt((-$c)/$a),-(sqrt((-$c)/$a)));
+
+            }
         }
         elseif ($c == 0)
         {
