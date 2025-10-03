@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="bg-info-subtle">
+        <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Málaga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Sobre Málaga</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Comida</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Museos</a>
+                </li>
+               <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>-->
+                <!--<li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>-->
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+    <div id="wrapper" class="container bg-white">
+
+        
+        <section id="hero">
+            <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://fastly.picsum.photos/id/613/800/450.jpg?hmac=vSm9BKZ-y_hiszNUpSnKe6rH3SUpdP2ke9c0Uk_yJ80" class="d-block w-100" alt="Puente">
+                    <div class="carousel-caption d-none d-md-block rounded bg-black bg-opacity-25">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+   
+                </div>
+                <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/131/800/450.jpg?hmac=Rb3FBNla4-ZRTmcSZKCbO1aDmczj296G1SsGo2YpOZo" class="d-block w-100" alt="Mirador">
+                    <div class="carousel-caption d-none d-md-block rounded bg-black bg-opacity-25">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/931/800/450.jpg?hmac=lpnQs6B-JXHnx8_QgrDRubOHzsxHl28UUFpeq_hj1EY" class="d-block w-100" alt="Montes">
+                    <div class="carousel-caption d-none d-md-block rounded bg-black bg-opacity-25">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>  
+        </section>
+        <section id="about" class="p-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h1>Sobre Málaga</h1>
+                        <p class="p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget purus ex. Fusce eros elit, tempus gravida aliquam in, dignissim eget est. Integer quis iaculis dolor, a venenatis lorem. Aliquam pharetra lacus semper felis cursus, sed fermentum lacus gravida. Aliquam ultrices ipsum orci, eget ultrices turpis pharetra eu. Phasellus suscipit ligula ut purus luctus varius. Aenean et sem id arcu finibus efficitur nec in mauris. Nunc lacinia sollicitudin mollis. Cras mollis velit mauris, sit amet consectetur nulla varius sed. Duis ut diam et erat auctor rhoncus vel sit amet ligula. Donec ut viverra mi, non suscipit diam.</p></div>
+                    <div class="col-12 col-md-6"><img class="img-fluid rounded  -circle" src="https://fastly.picsum.photos/id/233/400/400.jpg?hmac=o-9j3bw9bq04EbofPwwCovoZJ6nIWgMC1xgArhICHwA" alt="sdfga"></div>                </div>
+            </div>
+        </section>
+        <section id="comer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="museo">
+            <div class="container">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
