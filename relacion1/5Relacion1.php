@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5 de la Relación 1 - ARRAY ASOCIATIVO</title>
-     <link rel="shortcut icon" href="playamar.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/playamar.png" type="image/x-icon">
 </head>
 <body>
 

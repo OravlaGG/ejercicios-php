@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 6 de la Relación 1 - DECLARACIÓN DE OBJETO</title>
+    <link rel="shortcut icon" href="../img/playamar.png" type="image/x-icon">
 </head>
 <body>
     <h1>Ejercicio 6 de la Relación 1 - DECLARACIÓN DE OBJETO</h1>
