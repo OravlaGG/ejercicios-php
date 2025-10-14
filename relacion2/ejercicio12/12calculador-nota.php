@@ -8,10 +8,10 @@
 </head>
 <body>
     <?php
-    $nota0 = $_GET['inicial'];
-    $nota1 = $_GET['primera'];
-    $nota2 = $_GET['segunda'];
-    $nota3 = $_GET['tercera'];
+    $nota0 = $_GET['nota0'];
+    $nota1 = $_GET['nota1'];
+    $nota2 = $_GET['nota2'];
+    $nota3 = $_GET['nota3'];
     $nombre = $_GET['nombre'];
     $mail = $_GET['mail'];
     
