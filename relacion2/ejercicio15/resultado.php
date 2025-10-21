@@ -13,7 +13,6 @@
                 {
                     $esPrim = false;
                 }
-
                 $div++;
             }
 

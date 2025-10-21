@@ -41,7 +41,6 @@
 
             $fac = factorial($num);
             echo "<h2>El factorial de  $num es: $fac</h2><br>";
-        
         }
 
     ?>
