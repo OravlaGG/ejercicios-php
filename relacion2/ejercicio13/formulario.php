@@ -36,7 +36,6 @@
         <label for="lado3" class="form-label">Introduce un lado</label>
         <input type="text" name="lado3" id="lado3" class="form-control">
         <div id="lado3Help" class="form-text text-danger">El lado esta vacio o es 0 o inferior</div>
-
     </div>    
     <input type="submit" value="Enviar">
     </form>
