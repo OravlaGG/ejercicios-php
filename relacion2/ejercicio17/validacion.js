@@ -26,9 +26,10 @@ function validarFormulario()
 {
     let divisor = parseFloat(document.getElementById('divisor').value);
     let dividendo = parseFloat(document.getElementById('dividendo').value);
-    let resto = parseFloat(document.getElementById('resto').checked);
-    let cociente = parseFloat(document.getElementById('cociente').checked);
+    let resto = document.getElementById('resto').checked;
+    let cociente = document.getElementById('cociente').checked;
     let correcto = true;
+
 
     if (Number.isNaN(divisor) || divisor == 0)
     {
@@ -40,6 +41,7 @@ function validarFormulario()
         marcarError('dividendo');
         correcto = false;
     }
+
     if (!resto && !cociente)
     {
         document.getElementById('checkHelp').style.visibility="visible";

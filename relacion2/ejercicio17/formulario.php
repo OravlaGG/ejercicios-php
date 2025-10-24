@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 15 Relación 2 - Primos o divisores</title>
+    <title>Ejercicio 17 Relación 2 - Primos o divisores</title>
     <link rel="shortcut icon" href="../img/playamar.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ejercicio 15 Relación 2 - Primos o divisores</h1>
+        <h1>Ejercicio 17 Relación 2 - Primos o divisores</h1>
     </div>
     <div class="d-flex justify-content-center align-items-center vh-100">
     <form action="resultado.php" id="formT" method="get"class="p-3 shadow rounded">
@@ -30,7 +30,7 @@
         <div id="divisorHelp" class="form-text text-danger">El número esta vacio o es 0</div>
     </div>
     <div class="mb-3">
-        <label for="checks" class="form-label">Introduce una opcion o ambas</label><br>
+        <p>Introduce una opcion o ambas</p><br>
         <input type="checkbox" id="cociente" name="cociente" value="cociente">
         <label for="cociente">Cociente</label><br>
         <input type="checkbox" id="resto" name="resto" value="resto">
@@ -39,6 +39,7 @@
     </div>    
     <input type="submit" value="Enviar">
     </form>
+    </div>
     <script src="./validacion.js"></script>
 
 </body>
