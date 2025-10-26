@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 19 de la Relación 1 - TRANSFORMA A BINARIO</title>
+    <link rel="shortcut icon" href="../img/playamar.png" type="image/x-icon">
+
 </head>
 <body>
     <h1>Ejercicio 19 de la Relación 1 - TRANSFORMA A BINARIO</h1>
