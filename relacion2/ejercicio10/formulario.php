@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1 Relación 2 -  FORMULARIO CALCULADORA</title>
+    <title>Frontend de la Calculadora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
@@ -12,7 +12,7 @@
 <div class="d-flex justify-content-center align-items-center mt-5"><!--Cuando lo quier apartado y sin poder scrollear le digo que mt-3-->
 <!-- cundo el calculo esta en el propio archivo
   hay que llamarlo desde action (a sí  mismo)-->
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get" class="shadow-lg p-3 rounded bg-white">
+    <form action="calculo.php" method="get" class="shadow-lg p-3 rounded bg-white">
     <div class="mb-3">
         <label for="numero1" class="form-label">Introduce número</label>
         <input type="number" step="0.01" placeholder="Como mucho 2 cifras decimales" name="numero1" id="numero1" class="form-control">
@@ -35,48 +35,6 @@
     
 </div>
 <p id="resultado" class=" text-white text-center">
-    <?php
-    //haremos que se ejecute los cálculos tras el envio
-    if (!empty($_GET))
-    {  
-        //Esto son 3 variable locales
-        $numero1 = $_GET['numero1'];
-        $numero2 = $_GET['numero2'];
-        $operador = $_GET['operador'];
-
-        //echo $numero1, $operador, $numero2;
-        
-       /* switch ($operador)
-        {
-            case "suma":
-                $resultado = $numero1 + $numero2;
-                break;
-            case "resta":
-                $resultado = $numero1 - $numero2;
-                break;
-            case "producto":
-                $resultado = $numero1 * $numero2;
-                break;
-            case "division":
-                $resultado = $numero1 / $numero2;
-                break;
-            case "resto":
-                $resultado = $numero1 % $numero2;
-                break;
-        }*/
-
-        $resultado = match ($operador)
-        {
-            "suma"=> $numero1 + $numero2,
-            "resta"=> $numero1 - $numero2,
-            "producto"=> $numero1 * $numero2,
-            "division"=> $numero1 / $numero2,
-            "resto"=> $numero1 % $numero2,
-        };
-        echo "<br>El resultado es: $resultado";
-    }
     
-    ?>
-</p>
 </body>
 </html>
