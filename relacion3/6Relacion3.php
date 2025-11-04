@@ -24,6 +24,12 @@
     
         include "relacion3.php";
 
+        /*
+        function aleatorio($num1, $num2)
+        {
+            return (rand($num1,$num2));
+        }*/
+
         if (isset($_GET['numero1']))
         {
             $tiradas = $_GET['numero1'];
