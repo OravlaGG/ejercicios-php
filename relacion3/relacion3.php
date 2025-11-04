@@ -111,4 +111,18 @@ function invierteArr(&$arr)
                 swap($arr[$i],$arr[(count($arr)-1)-$i]);
             }
         }
+
+function asBurbuja(&$datos)
+        {
+            for ($c = 1; $c <= count($datos)/2; $c++)
+            {
+                for ($i = 0; $i < count($datos)-1; $i++)
+                {
+                    if($datos[$i] > $datos[$i+1])
+                    {
+                        swap($datos[$i], $datos[$i+1]);
+                    }
+                }
+            }
+        }
 ?>
