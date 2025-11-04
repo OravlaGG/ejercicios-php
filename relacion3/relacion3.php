@@ -94,4 +94,21 @@ function nombreMes()
 
             return $mEsp;
         }
+
+function swap(&$n1,&$n2)
+        {
+            $tmp = $n1;
+
+            $n1 = $n2;
+
+            $n2 = $tmp;
+        }
+
+function invierteArr(&$arr)
+        {
+            for ($i = 0; $i < count($arr)/2; $i++)
+            {
+                swap($arr[$i],$arr[(count($arr)-1)-$i]);
+            }
+        }
 ?>
