@@ -22,10 +22,7 @@
     <div class="content-center align-items-center">
     <?php
     
-        function aleatorio($num1, $num2)
-        {
-            return (rand($num1,$num2));
-        }
+        include "relacion3.php";
 
         if (isset($_GET['numero1']))
         {
