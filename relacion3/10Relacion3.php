@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 9 Relación 3 - Funcion Palabra larga</title>
+    <title>Ejercicio 10 Relación 3 - Funcion Palabra Invertidas</title>
     <link rel="shortcut icon" href="../img/playamar.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <h1>Ejercicio 9 Relación 3 - Funcion Palabra larga</h1>
+        <h1>Ejercicio 10 Relación 3 - Funcion Palabras Invertidas</h1>
     </div>
     <div class="d-flex  justify-content-center align-items-center">
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get"class="p-3 shadow rounded">
@@ -31,17 +31,11 @@
             //espacio
             $arr = preg_split("/[\s,]+/", $texto);
 
-            $larga = $arr[0];
-
-            for($i = 1; $i < count($arr); $i++)
+            for($i = count($arr) - 1; $i >= 0; $i--)
             {
-                if(strlen($larga) < strlen($arr[$i]))
-                {
-                    $larga = $arr[$i];
-                }
+                echo "$arr[$i] ";
             }
 
-            echo "La palabra más larga del texto es $larga";
         }
 
     ?>
