@@ -19,6 +19,7 @@
     </div>  
     <input type="submit" value="Enviar">
     </form>
+    </div>
     <div class="justify-content-center align-items-center">
     <?php
 
@@ -53,12 +54,14 @@
             echo"$tmp</div>";
 
             echo"<div class='alert alert-warning' role='alert'>";
-            //$tmp = crypt($texto);
-            echo "Aplicar crypt ";
-            $tmp = str_word_count($texto,0);
-            echo"$tmp</div>";
+            $tmp = crypt($texto,"salt");
+            echo "Aplicar crypt $tmp<br>";
+            $tmp = md5($texto);
+            echo "Aplicar md5 $tmp<br>";
+            $tmp = sha1($texto);
+            echo "Aplicar sha1 $tmp";
+            echo"</div>";
         }
-
     ?>
     </div>
 </body>
