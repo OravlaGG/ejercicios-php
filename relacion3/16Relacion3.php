@@ -63,9 +63,12 @@
         echo "Los cuadrados de los numeros del array: ". implode(", ",$tmp);
         echo"</div>";
 
-        $doble = function ($n) { return ($n * 2);};
+        $doble = function (&$value, $key) 
+        { 
+            $value = $value * 2;
+        };
         echo"<div class='alert alert-warning' role='alert'>";
-        array_walk($doble, $arr);//Devuelve Almacena los elementos que son true
+        array_walk($arr, $doble);//DRealiza la accion de la funcion con todo el array 
         echo "Los doble de los numeros del array: ". implode(", ",$arr);
         echo"</div>";
     ?>
