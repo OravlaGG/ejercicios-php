@@ -55,9 +55,9 @@
                         <img src='". $ubiImg[$sugerencia['primero']] ."' class='card-img-top'>
                         <ul class='list-group list-group-flush'>
                             <li class='list-group-item'>Entrante: ". $sugerencia['entrante'] ."</li>
-                            <li class='list-group-item'>Primer plato <b>". $sugerencia['primero'] ."</b></li>
-                            <li class='list-group-item'>Segundo plato ". $sugerencia['segundo'] ."</li>
-                            <li class='list-group-item'>Postre ". $sugerencia['postre'] ."</li>
+                            <li class='list-group-item'>Primer plato: <b>". $sugerencia['primero'] ."</b></li>
+                            <li class='list-group-item'>Segundo plato: ". $sugerencia['segundo'] ."</li>
+                            <li class='list-group-item'>Postre: ". $sugerencia['postre'] ."</li>
 
                         </ul>
                         </div><br>";
