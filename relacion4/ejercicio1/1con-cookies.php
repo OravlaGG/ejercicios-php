@@ -23,7 +23,7 @@ session_start();
 
         $idusuario = $_POST['idusuario'];
         $contrasena = $_POST['contrasena'];
-        unset($_SESSION['errorLogin']);
+        
 
         if (compruebaAcceso($idusuario,$contrasena))
         {
@@ -41,6 +41,7 @@ session_start();
         {
             $_SESSION['errorLogin'] = true;
             header("Location: login.php");
+            unset($_SESSION['errorLogin']);
         }
         ?>
     </div>
