@@ -100,7 +100,23 @@
                 $this->credito = $credito;
             }
 
+            #[Override]
+            public function extraerDinero($cantidad)
+            {
+                if($this->getSaldo() - $cantidad >= $this->credito)
+                {
+                    $this->extraerDinero($cantidad);
+                }
+            }
 
+            #[Override]
+            public function transferencia(CuentaBancaria $cuenta, $cantidad)
+            {
+                if($this->getSaldo() - $cantidad >= $this->credito)
+                {
+                    $this->transferencia($cuenta, $cantidad);
+                }
+            }
         }
 
 
