@@ -10,15 +10,17 @@
 
         abstract class CuentaBancaria  
         {
-            private string  $numCuenta;
-            private string  $titular;
-            private float   $saldo;
-            private int     $numOperaciones;
+            protected string  $numCuenta;
+            protected string  $titular;
+            protected float   $saldo;
+            protected int     $numOperaciones;
 
-            public function __construct($numCuenta,$titular,$saldo = 0, $numOperaciones = 0)
+            public function __construct(string $numCuenta,string $titular)
             {
                 $this->numCuenta = $numCuenta;
                 $this->titular = $titular;
+                $this->saldo = 0;
+                $this->numOperaciones = 0;
             }
 
             public function __destruct()
@@ -26,17 +28,17 @@
                 echo "Cuenta Bancaria $this->numCuenta eliminado";
             }
 
-            public function getSaldo()
+            public function getSaldo(): float
             {
                 return $this->saldo;
             }
 
-            public function toString()
+            public function toString(): string
             {
-                return ("Numero Cuenta: $this->numCuenta, Titular: $this->titular");
+                return ("Numero Cuenta: $this->numCuenta, Titular: $this->titular, Saldo: $this->saldo, Num. Operaciones: $this->numOperaciones");
             }
 
-            public function depositarDinero($cantidad)
+            public function depositarDinero(float $cantidad)
             {
                 if($cantidad > 0)
                 {
@@ -46,7 +48,7 @@
                 
             }
 
-            public function extraerDinero($cantidad)
+            public function extraerDinero(float $cantidad)
             {
                 if($cantidad > 0)
                 {
@@ -56,7 +58,7 @@
                 
             }
 
-            public function transferencia(CuentaBancaria $cuenta, $cantidad)
+            public function transferencia(CuentaBancaria $cuenta, float $cantidad)
             {
                 if($cantidad > 0)
                 {
@@ -71,7 +73,7 @@
         class CuentaDebito extends CuentaBancaria
         {
             #[Override]
-            public function extraerDinero($cantidad)
+            public function extraerDinero(float $cantidad)
             {
                 if($this->getSaldo() - $cantidad >= 0)
                 {
@@ -80,7 +82,7 @@
             }
 
             #[Override]
-            public function transferencia(CuentaBancaria $cuenta, $cantidad)
+            public function transferencia(CuentaBancaria $cuenta, float $cantidad)
             {
                 if($this->getSaldo() - $cantidad >= 0)
                 {
@@ -93,7 +95,7 @@
         {
             private float $credito;
 
-            public function __construct($numCuenta, $titular, $credito,$saldo = 0, $numOperaciones = 0)
+            public function __construct(string $numCuenta, string $titular,float $credito = 0)
             {
                 parent::__construct($numCuenta, $titular);
 
@@ -101,7 +103,7 @@
             }
 
             #[Override]
-            public function extraerDinero($cantidad)
+            public function extraerDinero(float $cantidad)
             {
                 if($this->getSaldo() - $cantidad >= $this->credito)
                 {
@@ -110,14 +112,28 @@
             }
 
             #[Override]
-            public function transferencia(CuentaBancaria $cuenta, $cantidad)
+            public function transferencia(CuentaBancaria $cuenta, float $cantidad)
             {
                 if($this->getSaldo() - $cantidad >= $this->credito)
                 {
-                    $this->transferencia($cuenta, $cantidad);
+                    parent::transferencia($cuenta, $cantidad);
                 }
             }
         }
+
+        $credit = new CuentaCredito("00000000","Álvaro Gomez");
+        $credit2 = new CuentaCredito("00000001","Ana");
+
+        echo $credit->toString();
+        echo $credit2->toString();
+
+        $credit->depositarDinero(1000.00);
+        
+        echo $credit->toString();
+        $credit->transferencia($credit2,200);
+
+        echo $credit->toString();
+        echo $credit2->toString();
 
 
     ?>

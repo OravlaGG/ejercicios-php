@@ -11,9 +11,9 @@
     
         interface Encendible
         {
-            public function encender();
+            public function encender(): string;
 
-            public function apagar();
+            public function apagar(): string ;
         }
 
         class Bombilla implements Encendible
@@ -22,10 +22,11 @@
             private int     $lumenes;
             private bool    $encendida;
 
-            public function __construct($tipoBombilla,$lumenes,$encendida = false)
+            public function __construct(string $tipoBombilla,int $lumenes, $encendida = false)
             {
                 $this->tipoBombilla = $tipoBombilla;
                 $this->lumenes = $lumenes;
+                $this->encendida = $encendida;
             }
 
             public function __destruct()
@@ -33,14 +34,14 @@
                 echo "Esta  bombilla $this->tipoBombilla eliminado";
             }
 
-            public function encender()
+            public function encender(): string
             {
                 $this->encendida = true;
 
                 return "La bombilla esta encendida";
             }
 
-            public function apagar()
+            public function apagar(): string 
             {
                 $this->encendida = false;
 
@@ -56,12 +57,15 @@
             private string  $matricula;
             private bool    $estado;
 
-            public function __construct($matricula, $gasolina = 0, $bateria = 2, $estado = false)
+            public function __construct(string $matricula, $gasolina = 0, $bateria = 2, $estado = false)
             {
                 $this->matricula = $matricula;
+                $this->gasolina = $gasolina;
+                $this->bateria = $bateria;
+                $this->estado = $estado;
             }
 
-            public function cargarGasolina($cantidad)
+            public function cargarGasolina(int $cantidad)
             {
                 if ($cantidad > 0)
                 {
@@ -69,7 +73,7 @@
                 }
             }
 
-            public function encender()
+            public function encender(): string 
             {
                 $mensaje = "";
 
@@ -93,7 +97,7 @@
                 return $mensaje;
             }
 
-            public function apagar()
+            public function apagar(): string 
             {
                 $mensaje = "";
 
@@ -112,7 +116,7 @@
         }
 
         function enciende_algo (Encendible $algo) {
-            $algo->encender();
+            echo $algo->encender();
             }
             $miBombilla = new Bombilla("led",12);
             $miMoto = new Motocicleta("3873 NXB");

@@ -13,7 +13,7 @@
             public string   $tipoCocina;
             public array    $ratings;
 
-            public function __construct($nombre,$tipoCocina,$ratings=[])
+            public function __construct(string $nombre,string $tipoCocina, array $ratings=[])
             {
                 $this -> nombre = $nombre;
                 $this -> tipoCocina = $tipoCocina;
@@ -24,27 +24,27 @@
                 echo "Restaurante $this->nombre eliminado";
             }
 
-            public function toString()
+            public function toString(): string
             {
                 return ("Nombre: $this->nombre Tipo de cocina: $this->tipoCocina");
             }
 
-            public function numRatings()
+            public function numRatings(): int
             {
                 return count($this->ratings);
             }
 
-            public function addRating($rate)
+            public function addRating(int $rate)
             {
                 array_push($this->ratings,$rate);
             }
 
-            public function addMulRatings($rates)
+            public function addMulRatings(array $rates)
             {
                 array_merge($this->ratings,$rates);
             }
 
-            public function mediaRatings()
+            public function mediaRatings(): float
             {
                 $media = 0;
                 $cant = count($this->ratings);
