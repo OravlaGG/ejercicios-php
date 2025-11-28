@@ -21,7 +21,8 @@
                 <input type="text" name="contrasena" id="contrasena" class="form-control">
                 <div id="contrasenaHelp" class="form-text text-danger">Debe contener may, min, digitos y car. especiales</div>
             </div>
-            <input type="hidden" name="navegador" value="pepe">
+            <input type="hidden" name="navegador" value="pepe
+            ">
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
